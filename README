@@ -5,7 +5,9 @@ Uma nova funcionalidade adicionada ao Rails 2.3 é a possibilidade de atualizar 
 
 Para mostrar essa funcionalidade criei um tutorial explicando como criar um sistema de gerenciamento de contatos simples, que resultou neste exemplo.
 
-O código foi baseado no "exemplo de gerenciamento de formulários complexos":http://github.com/alloy/complex-form-examples criado pelo "Eloy Duran":http://github.com/alloy.
+O código foi baseado no exemplo de gerenciamento de formulários complexos criado pelo Eloy Duran, disponível em:
+http://github.com/alloy/complex-form-examples
 
-O tutorial está disponível "aqui":http://carlosantoniodasilva.wordpress.com/2009/03/28/rails-23-nested-attributes-atributos-aninhados.
+O tutorial que resultou nesta aplicação de exemplo está disponível em:
+http://carlosantoniodasilva.wordpress.com/2009/03/28/rails-23-nested-attributes-atributos-aninhados.
 
