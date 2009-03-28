@@ -1,0 +1,27 @@
+<% form_for(@person) do |f| %>
+  <%= f.error_messages %>
+  <% nested_attributes_for f, :contacts -%>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :city_id %>
+    <%= f.collection_select :city_id, City.all(:order => 'name'), :id, :name %>
+    or
+    <% f.fields_for :city, City.new do |city_form| -%>
+      <%= city_form.label :name, 'Create a new' %><%= city_form.text_field :name %>
+    <% end -%>
+  </p>
+  <fieldset id="contacts">
+    <legend>Contacts</legend>
+    <% f.fields_for :contacts do |contacts_form| -%>
+      <%= render :partial => 'contact', :locals => { :f => contacts_form }  %>
+    <% end -%>
+    <p><%= link_to 'Add contact', '#contacts', :class => 'add' %></p>
+  </fieldset>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>
+

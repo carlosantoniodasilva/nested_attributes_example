@@ -1,0 +1,22 @@
+<p>
+  <b>Name:</b>
+  <%=h @person.name %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @person.city.try(:name) %>
+</p>
+
+<% unless @person.contacts.empty? -%>
+  <b>Contacts</b>
+  <ul>
+  <% @person.contacts.each do |contact| -%>
+    <li><%= contact.kind.humanize %>: <%= contact.description %></li>
+  <% end -%>
+  </ul>
+<% end -%>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
+

@@ -1,0 +1,10 @@
+<div class="contact">
+  <p>
+    <%= f.label :kind %>
+    <%= f.select :kind, Contact::KINDS.map { |kind| [kind.humanize, kind] } %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= remove_link_unless_new_record(f) %>
+  </p>
+</div>
+
